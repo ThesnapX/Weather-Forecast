@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Forcast</title>
+    <link rel="stylesheet" href="/CSS/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <header>
+        <input type="text" class="city-input" placeholder="Search city" />
+        <button class="search-btn">
+          <span class="material-symbols-outlined search-btn"> search </span>
+        </button>
+      </header>
+
+      <div class="weather-main not-active">
+        <section class="weather-info">
+          <div class="weather-location">
+            <span class="material-symbols-outlined location-icon">
+              location_on
+            </span>
+            <h3 class="city-name">Uttar Pradesh</h3>
+          </div>
+          <h3 class="current-date">Thu,21 Aug</h3>
+        </section>
+
+        <section class="weather-details">
+          <div class="weather-degree">
+            <img
+              class="weather-icon-img"
+              src="/assets/weather/clouds.svg"
+              alt=""
+            />
+            <div class="weather-stats">
+              <button class="unit-toggle">°C / °F</button>
+              <h1 class="weather-degree-text">30 °C</h1>
+              <p class="weather-degree-stats">Clouds</p>
+            </div>
+          </div>
+          <div class="weather-others">
+            <div class="weather-humidity">
+              <span class="material-symbols-outlined"> water_drop </span>
+              <div class="humidity-stats">
+                <p>Humidity</p>
+                <h3 class="humidity-stats-text">74%</h3>
+              </div>
+            </div>
+            <div class="weather-wind-speed">
+              <span class="material-symbols-outlined"> air </span>
+              <div class="wind-speed-stats">
+                <p>Wind Speed</p>
+                <h3 class="wind-stats-text">4.12/ms</h3>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="weather-forecast-wrapper"></section>
+      </div>
+      <div class="error-404 not-active">
+        <img src="/assets/message/not-found.png" alt="" />
+        <h1>City not found</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+      </div>
+      <div class="search-city-message">
+        <img src="/assets/message/search-city.png" alt="" />
+        <h1>Search city</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
