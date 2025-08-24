@@ -4,7 +4,7 @@ A responsive weather forecast application that provides current weather and 3-da
 
 ## Live Demo
 
-https://weatherforecastapp-project1.netlify.app/
+https://forecast-weatherify.netlify.app/
 
 ## Features
 
