@@ -53,7 +53,7 @@ cityInput.addEventListener("keydown", (event) => {
 
 // Weather Fetching & DOM Manuipilation
 async function getFetchData(endPoint, city) {
-  const apiUrl = `http://api.weatherapi.com/v1/${endPoint}.json?key=${weatherApiKey}&q=${city}&aqi=no&days=8`;
+  const apiUrl = `https://api.weatherapi.com/v1/${endPoint}.json?key=${weatherApiKey}&q=${city}&aqi=no&days=8`;
   const response = await fetch(apiUrl);
   const rawConvert = await response.json();
   return rawConvert;
@@ -90,7 +90,7 @@ function renderCurrentWeather() {
   humidityStatstextText.textContent = humidity + "%";
   windStatstext.textContent = wind_kph + "km/h";
   weatherDegreeStats.textContent = text;
-  weatherIconImage.setAttribute("src", `/assets/weather/${showIcon(code)}`);
+  weatherIconImage.setAttribute("src", `./assets/weather/${showIcon(code)}`);
   currentDate.textContent = getCurrentDate();
 
   // Set temperature based on unit
@@ -174,7 +174,7 @@ function renderForecast() {
 
       forecastEl.innerHTML = `
         <p>${formattedDate}</p>
-        <img src="/assets/weather/${showIcon(noonForecast.condition.code)}" />
+        <img src="./assets/weather/${showIcon(noonForecast.condition.code)}" />
         <p>${tempText}</p>
       `;
       forecastWrapper.appendChild(forecastEl);
